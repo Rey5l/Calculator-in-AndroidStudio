@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LearnAS</string>
+    <string name="logo_text">Калькулятор</string>
+    <string name="hint">Введите первое число</string>
+    <string name="hint2">Введите второе число</string>
+    <string name="button_text">Посчитать</string>
+    <string name="result"> </string>
+    <string name="author">made by Reysl</string>
+</resources>

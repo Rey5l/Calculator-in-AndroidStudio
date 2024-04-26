@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B3F77D</color>
+<!--    primary colors-->
+    <color name="green">#B3F77D</color>
+    <color name="white">#fff</color>
+    <color name="light">#F4F4F0</color>
+    <color name="gray">#B1B2A8</color>
+    <color name="black">#141413</color>
+<!--    accents-->
+    <color name="red">#F76945</color>
+    <color name="dark_orange">#F79C59</color>
+    <color name="orange">#F6CB5E</color>
+    <color name="accents_green">#A3E56E</color>
+    <color name="yellow">#F7E845</color>
+    <color name="blue">#5DC8F5</color>
+<!--    neutrals-->
+    <color name="neutrals_black">#141413</color> <!-- 800 -->
+    <color name="neutrals_gray">#4C4C48</color> <!-- 700 -->
+    <color name="neutrals_gray_first">#989990</color> <!-- 600 -->
+    <color name="neutrals_light">#B1B2A8</color> <!-- 500 -->
+    <color name="neutrals_light_first">#CBCCC0</color> <!-- 400 -->
+    <color name="neutrals_white">#E8E8E3</color> <!-- 300 -->
+    <color name="neutrals_white_first">#F4F4F0</color> <!-- 200 -->
+    <color name="neutrals_white_second">#FAFAF7</color> <!-- 100 -->
+</resources>
