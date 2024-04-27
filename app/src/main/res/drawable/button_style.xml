@@ -2,5 +2,5 @@
     <solid android:color="@color/green"/> <!-- Задаем цвет кнопки -->
 
     <!-- Задаем радиус скругления углов -->
-    <corners android:radius="16dp"/>
+    <corners android:radius="10dp"/>
 </shape>
