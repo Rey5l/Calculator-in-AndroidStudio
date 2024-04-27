@@ -1,6 +1,7 @@
 package com.reysl.learnAndroidStudio;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -21,45 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView mainText = findViewById(R.id.main_text);
-        Button btnSecond = findViewById(R.id.btn_second);
-        btnSecond.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                showInfo(mainText.getText().toString(), btnSecond);
-                showInfoAlert("Вы хотите закрыть приложение?");
-            }
-        });
     }
 
-    public void btnClick(View v) {
-        showInfo(((Button) v).getText().toString(), ((Button) v));
-    }
-
-    private void showInfoAlert(String text) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Большая подсказка")
-                .setMessage(text)
-                .setCancelable(false)
-                .setPositiveButton("Конечно", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        finish();
-                    }
-                })
-                .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
-    private void showInfo(String text, Button btn) {
-        btn.setText("Уже нажали");
-        btn.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
-        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+    public void startNewActivity(View v) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
