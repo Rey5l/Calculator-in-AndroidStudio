@@ -1,5 +1,6 @@
 package com.reysl.learnAndroidStudio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -64,5 +65,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+    }
+
+    public void goContacts(View view) {
+        Intent intent = new Intent(this, ContactsActivity.class);
+        startActivity(intent);
     }
 }
