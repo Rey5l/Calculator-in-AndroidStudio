@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ваш личный кабинет"
+            android:text="Ваши контакты"
             android:textSize="16sp"
             android:layout_marginTop="50dp"
             android:layout_marginStart="40dp"
