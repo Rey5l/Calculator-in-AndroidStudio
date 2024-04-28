@@ -8,34 +8,33 @@
     android:backgroundTint="@android:color/transparent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/car_image"
         android:layout_width="0dp"
-        android:layout_height="298dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="100dp"
-        android:contentDescription="@string/logo"
-        android:scaleType="centerInside"
+        android:layout_height="300dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/video_calling" />
+        app:srcCompat="@drawable/car" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="126dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="404dp"
+        android:id="@+id/police_image"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:backgroundTint="@android:color/transparent"
-        android:contentDescription="@string/logo"
-        android:onClick="startNewActivity"
-        android:scaleType="centerInside"
+        android:contentDescription="@string/desc"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/video_calling" />
+        app:srcCompat="@drawable/police" />
 </androidx.constraintlayout.widget.ConstraintLayout>

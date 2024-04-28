@@ -1,3 +1,4 @@
 <resources>
     <string name="logo">Просто текст</string>
+    <string name="desc">Это описание</string>
 </resources>
