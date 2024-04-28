@@ -8,63 +8,53 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnSecond;
-    ImageButton carImage, policeImage;
-    MediaPlayer carSound, policeSound;
+    Button btnFragment1, btnFragment2;
+    FrameLayout frameLayout;
+    private FirstFragment firstFragment = new FirstFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        carImage = findViewById(R.id.car_image);
-        policeImage = findViewById(R.id.police_image);
+        btnFragment1 = findViewById(R.id.btn_fragment1);
+        btnFragment2 = findViewById(R.id.btn_fragment2);
+        frameLayout = findViewById(R.id.frame);
 
-        carSound = MediaPlayer.create(this, R.raw.car);
-        policeSound = MediaPlayer.create(this, R.raw.police);
+        setNewFragment(firstFragment);
 
-        carImage.setOnClickListener(new View.OnClickListener() {
+        btnFragment1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soundPlayButton(carSound, policeSound);
+                setNewFragment(firstFragment);
             }
         });
 
-        policeImage.setOnClickListener(new View.OnClickListener() {
+        btnFragment2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soundPlayButton(policeSound, carSound);
+                SecondFragment secondFragment = new SecondFragment();
+                setNewFragment(secondFragment);
             }
         });
     }
 
-    private void soundPlayButton(MediaPlayer sound1, MediaPlayer sound2) {
-        if (sound1.isPlaying()) {
-            sound1.pause();
-            sound1.seekTo(0);
-            sound1.setLooping(false);
-        }
-
-        if (sound2.isPlaying()) {
-            sound2.pause();
-            sound2.seekTo(0);
-            sound2.setLooping(false);
-        }
-        sound1.start();
-        sound1.setLooping(true);
-    }
-
-    public void startNewActivity(View v) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
+    private void setNewFragment(Fragment fragment) {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frame, fragment);
+        ft.addToBackStack(null); // чтобы память телефона не замусорилась
+        ft.commit();
     }
 }
