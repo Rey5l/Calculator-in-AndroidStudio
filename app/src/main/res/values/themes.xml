@@ -1,8 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.LearnAS" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.LearnAS" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="buttonStyle">@style/DefaultButton</item>
     </style>
-    <style name="Theme.LearnAS" parent="Base.Theme.LearnAS" />
 </resources>
