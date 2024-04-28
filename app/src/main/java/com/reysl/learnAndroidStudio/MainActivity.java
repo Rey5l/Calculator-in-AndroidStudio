@@ -72,4 +72,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ContactsActivity.class);
         startActivity(intent);
     }
+
+    public void goWeb(View view) {
+        Intent intent = new Intent(this, WebActivity.class);
+        startActivity(intent);
+    }
 }

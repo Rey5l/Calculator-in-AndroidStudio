@@ -13,25 +13,28 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/neutrals_white">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Привет, Админ"
-            android:textSize="20sp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="40dp"
-            android:layout_marginStart="40dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Привет, Админ"
             android:textColor="@color/neutrals_gray"
-            android:fontFamily="@font/inter_bold"/>
+            android:textSize="20sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ваш личный кабинет"
-            android:textSize="16sp"
-            android:layout_marginTop="80dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Ваш личный кабинет"
             android:textColor="@color/neutrals_gray"
-            android:fontFamily="@font/inter_bold"/>
+            android:textSize="16sp" />
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/main_box"
         android:layout_width="match_parent"
@@ -104,38 +107,37 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue">
+        android:background="@color/blue"
+        android:gravity="center">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:backgroundTint="@color/green"
-            android:textColor="@color/black"
-            android:fontFamily="@font/inter_medium"
-            android:text="Главная" />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="60dp"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/home" />
 
-        <Button
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@android:color/transparent"
             android:fontFamily="@font/inter_medium"
             android:onClick="goContacts"
-            android:text="Контакты"
-            android:textColor="@color/black" />
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/contacts_img" />
 
-        <Button
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:backgroundTint="@color/green"
-            android:textColor="@color/black"
-            android:fontFamily="@font/inter_medium"
-            android:text="Блог" />
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:onClick="goWeb"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/globe" />
 
     </LinearLayout>
-
-
 
 
 </RelativeLayout>

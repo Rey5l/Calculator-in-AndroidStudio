@@ -57,6 +57,11 @@ public class ContactsActivity extends AppCompatActivity implements GestureDetect
         startActivity(intent);
     }
 
+    public void goWeb(View view) {
+        Intent intent = new Intent(this, WebActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onDown(@NonNull MotionEvent motionEvent) {
         return false;

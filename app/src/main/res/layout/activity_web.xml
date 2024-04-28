@@ -5,41 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactsActivity">
+    tools:context=".WebActivity">
 
-    <RelativeLayout
-        android:id="@+id/upperBg"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@color/neutrals_white">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Привет, Админ"
-            android:textSize="20sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/neutrals_gray"
-            android:fontFamily="@font/inter_bold"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ваши контакты"
-            android:textSize="16sp"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/neutrals_gray"
-            android:fontFamily="@font/inter_bold"/>
-    </RelativeLayout>
-
-    <ListView
-        android:id="@+id/listView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/upperBg"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="20dp"
-        android:layout_above="@+id/bottom_menu"/>
+        android:layout_above="@+id/bottom_menu" >
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottom_menu"
@@ -48,7 +24,7 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:background="@color/blue"
-        android:gravity="center" >
+        android:gravity="center">
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -74,12 +50,13 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:backgroundTint="@android:color/transparent"
-            android:scaleType="centerInside"
+            android:fontFamily="@font/inter_medium"
             android:onClick="goWeb"
+            android:scaleType="centerInside"
+            android:text="Браузер"
+            android:textColor="@color/black"
             app:srcCompat="@drawable/globe" />
 
     </LinearLayout>
-
-
 
 </RelativeLayout>
